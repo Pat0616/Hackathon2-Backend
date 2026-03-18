@@ -64,10 +64,7 @@ export async function getAllProducts (req, res)
             "SELECT * FROM products"
         )
 
-        res.status(200).json({
-            message: "Products Retrieved Successfully",
-            products: products
-        })
+        res.json(products);
     }
     catch(err)
     {
