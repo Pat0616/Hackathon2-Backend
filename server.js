@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import authRouter from "./routes/authRoutes.js";
+import productsRouter from "./routes/productsRoutes.js";
 
 
 dotenv.config();
@@ -21,6 +22,7 @@ credentials: true,
 
 
 app.use("/api/auth", authRouter);
+app.use("/api/products", productsRouter);
 app.get("/", (req, res) => {
 res.send("API is running...");
 });
