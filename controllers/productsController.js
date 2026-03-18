@@ -87,10 +87,7 @@ export async function searchProduct (req, res){
             [`%${product_name}%`]
         )
 
-        res.status(200).json({
-            message: "Products Searched Successfully",
-            products: products
-        })
+      
 
         res.json(products);
     }
